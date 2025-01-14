@@ -7,7 +7,7 @@ delete
 from sqlalchemy import select
 from sqlalchemy.engine import Result
 from sqlalchemy.ext.asyncio import AsyncSession
-from watchfiles import awatch
+
 
 from .schemas import ProductCreate, ProductUpdate, ProductUpdatePartial
 
