@@ -30,8 +30,11 @@ async def main(request: Request):
 
 @app.post('/new_link')
 async def new_link(request: Request, name: str = Form(...)):
-    print(name)
     return RedirectResponse(url=app.url_path_for('main'), status_code=HTTP_303_SEE_OTHER)
+
+@app.get("/addnew/")
+async def add_new_item(request: Request):
+    return templates.TemplateResponse('addnew.html', {'request': request})
 
 
 if __name__ == '__main__':
